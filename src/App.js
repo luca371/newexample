@@ -26,13 +26,29 @@ function App() {
   return (
     <div className="wrapper">
       {/* Background audio */}
-      <audio ref={audioRef} src="/sound/bg.mp3" loop />
+      <audio
+        ref={audioRef}
+        src={`${process.env.PUBLIC_URL}/sound/bg.mp3`}
+        loop
+      />
 
       {/* Images */}
       <div className="container">
-        <img src="/images/img1.png" alt="img1" className="image slide delay1" />
-        <img src="/images/img2.png" alt="img2" className="image slide delay2" />
-        <img src="/images/img3.png" alt="img3" className="image slide delay3" />
+        <img
+          src={`${process.env.PUBLIC_URL}/images/img1.png`}
+          alt="img1"
+          className="image slide delay1"
+        />
+        <img
+          src={`${process.env.PUBLIC_URL}/images/img2.png`}
+          alt="img2"
+          className="image slide delay2"
+        />
+        <img
+          src={`${process.env.PUBLIC_URL}/images/img3.png`}
+          alt="img3"
+          className="image slide delay3"
+        />
       </div>
 
       {/* Main text */}
