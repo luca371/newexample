@@ -1,11 +1,11 @@
 /* Page wrapper */
 .wrapper {
-  height: 100vh;
+  min-height: 100svh; /* iOS-safe viewport */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
   padding: 20px;
 }
 
@@ -294,5 +294,27 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    justify-content: flex-start; /* stop vertical centering */
+    overflow-y: auto;            /* allow scrolling */
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .image {
+    width: 70%;
+  }
+
+  .text {
+    font-size: 1.2rem;
   }
 }
